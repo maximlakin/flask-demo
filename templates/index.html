@@ -9,7 +9,17 @@
 	</head>
 	<body>
 		<div>
-  			<h1>Hello, Flask!</h1>
+  			<h1>User Input</h1>
+				<p><b>Please enter a stock ticker eg. GOOG, and check desired features.</b></p>
+				<form class="" action="#" method="post">
+					<label for="ticker-symbol">Ticker Symbol</label>
+					<input type="text" name="ticker-symbol" value=""> <br>
+					<input type="checkbox" name="closing-price" value="closing-price"> Closing Price <br>
+					<input type="checkbox" name="adj-closing-price" value="adj-closing-price"> Adjusted closing price <br>
+					<input type="checkbox" name="opening-price" value="opening-price"> Opening price <br>
+					<input type="checkbox" name="adj-opening-price" value="adj-opening-price"> Adjusted opening price <br>
+					<button type="submit" name="submit">Submit</button>
+				</form>
 		</div>
 	</body>
 </html>
