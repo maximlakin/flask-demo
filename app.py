@@ -18,7 +18,7 @@ def index():
 def graph():
   symbol = request.form['ticker-symbol']
   url = 'https://www.quandl.com/api/v1/datasets/WIKI/%s.json?api_key=vD5s74xXzwWxuqKYFqYR' % symbol
-  req = requests.get(api_url)
+  req = requests.get(url)
   prices = []
   dates = []
   recent = req.json()['data'][0:30]
