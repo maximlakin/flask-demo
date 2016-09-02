@@ -17,11 +17,11 @@ def index():
 @app.route('/graph', methods = ['POST'])
 def graph():
   symbol = request.form['ticker-symbol']
-  api_url = 'https://www.quandl.com/api/v1/datasets/WIKI/%s.json?api_key=vD5s74xXzwWxuqKYFqYR' % symbol
-  raw_data = requests.get(api_url)
+  url = 'https://www.quandl.com/api/v1/datasets/WIKI/%s.json?api_key=vD5s74xXzwWxuqKYFqYR' % symbol
+  req = requests.get(api_url)
   prices = []
   dates = []
-  recent = raw_data.json()['data'][0:30]
+  recent = req.json()['data'][0:30]
   recent.reverse()
   for entry in recent:
       prices.append(entry[4])
